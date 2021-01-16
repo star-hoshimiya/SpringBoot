@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+
+  resources:
+    static-locations: classpath:/custom/, classpath:/resources/,classpath:/static/
+  mvc:
+    static-path-pattern: /abc/**
+
+
+mybatis:
+  type-aliases-package: com.purvar.springboot.demo.mapper
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    
